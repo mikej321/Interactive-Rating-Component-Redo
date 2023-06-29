@@ -63,8 +63,8 @@ img {
 header {
     background: hsla(0, 0%, 100%, 0.03);
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ header > img {
 .rating-start {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .rating-start > h1 {
@@ -106,8 +106,8 @@ header > img {
 }
 
 .button-selection > button {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: none;
     background: hsla(0, 0%, 100%, 0.03);
