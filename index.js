@@ -27,38 +27,18 @@ buttons.forEach((button) => {
 
 // Fade in function
 
-function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || 'flex';
-    (function fade() {
-        let val = parseFloat(el.style.opacity);
-        if (!((val += .05) >= 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
 
 // Fade out function ** Couldn't get it to work unfortunately!
 
-function fadeOut(el) {
-    el.style.opacity = 1;
-    (function fade() {
-        if ((el.style.opacity -= .01) < 0) {
-            el.style.display = 'none';
-        } else {
-            requestAnimationFrame(fade);
-        }
-    })();
-};
 
 /* Event listener for the submit button, which leads to the ratingEnd
 page. It will contain the selectedResult in the span tag */
 
 submit.addEventListener('click', () => {
-    upperPortion.forEach(portion => portion.style.display = 'none');
-    fadeIn(ratingEnd, 'flex');
-
+    $(upperPortion).fadeOut(300, function() {
+        $(ratingEnd).fadeIn(300);
+    });
+    
 })
 
 // ratingEnd.style.display = 'flex';    
