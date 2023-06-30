@@ -34,11 +34,16 @@ buttons.forEach((button) => {
 /* Event listener for the submit button, which leads to the ratingEnd
 page. It will contain the selectedResult in the span tag */
 
+console.log($(upperPortion).css('height'));
+
 submit.addEventListener('click', () => {
-    $(upperPortion).fadeOut(300, function() {
-        $(ratingEnd).fadeIn(300);
+    // $(upperPortion).fadeOut(300, function() {
+    //     $(ratingEnd).fadeIn(300);
+    // });
+
+    $(upperPortion).fadeOut(600).promise().done(function() {
+        $(ratingEnd).css('display', 'flex').css('gap', '3.1rem').hide().fadeIn(300);
     });
-    
 })
 
 // ratingEnd.style.display = 'flex';    

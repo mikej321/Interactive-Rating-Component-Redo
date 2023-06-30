@@ -205,14 +205,20 @@ header > img {
         max-width: 45rem;
         border-radius: 24px;
     }
+    
+    .upper {
+        
+    }
 
     .rating-start > p {
         max-width: 36ch;
     }
 
     .rating-end {
+        display: none;
         max-width: 45rem;
         padding: .5rem;
+        gap: 1rem;
     }
 
     .rating-end > p:last-of-type {
